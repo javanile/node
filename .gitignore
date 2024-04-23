@@ -1,2 +1,6 @@
 .idea/
 .vscode/
+
+.npm-cache/
+tests/tmp/
+!tests/tmp/.gitkeep

@@ -3,3 +3,7 @@ version: "3"
 services:
   node:
     build: 18-alpine/
+    volumes:
+      - ./:/app
+      - ./.npm-cache:/var/npm-cache
+    working_dir: /app/tests/tmp
