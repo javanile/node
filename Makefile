@@ -1,14 +1,14 @@
 
 build:
 	@docker compose build
-	@docker build --no-cache -t javanile/node:18-alpine 18-alpine
+	@docker build --no-cache -t javanile/node:20-bookworm-slim 20-bookworm-slim
 
 push: build
 	git add .
-	git commit -m "Update node:18-alpine" || true
+	git commit -m "Update node:20-bookworm-slim" || true
 	git push
 	docker login --username=yafb
-	docker push javanile/node:18-alpine
+	docker push javanile/node:20-bookworm-slim
 
 test:
 	docker compose run --rm node npm --version

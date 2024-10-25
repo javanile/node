@@ -2,7 +2,7 @@ version: "3"
 
 services:
   node:
-    build: 18-alpine/
+    build: 20-bookworm-slim/
     volumes:
       - ./:/app
       - ./.npm-cache:/var/npm-cache
